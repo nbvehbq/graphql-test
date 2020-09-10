@@ -20,7 +20,6 @@ export class Book {
 
   @Field(() => Author)
   @ManyToOne(() => Author)
-  // @JoinTable()
   author!: Author;
   @RelationId((book: Book) => book.author)
   authorId!: number;
